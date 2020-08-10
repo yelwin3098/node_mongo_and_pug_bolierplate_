@@ -1,5 +1,6 @@
 'use strict'
 
+const path=require('path');
 const config = require('../config')
 const express = require('express')
 const morgan = require('morgan')
@@ -8,6 +9,7 @@ const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const errorHandler = require('../middlewares/error-handler')
 const apiRouter = require('../routes/api')
+const pageRouter=require('../routes/page')
 const passport = require('passport')
 const passportJwt = require('../services/passport')
 
@@ -22,7 +24,13 @@ if (config.env !== 'test') app.use(morgan('combined'))
 app.use(passport.initialize())
 passport.use('jwt', passportJwt.jwt)
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, 'public')))
+
+
 app.use('/api', apiRouter)
+app.use('/dashboard',pageRouter)
 app.use(errorHandler.handleNotFound)
 app.use(errorHandler.handleError)
 

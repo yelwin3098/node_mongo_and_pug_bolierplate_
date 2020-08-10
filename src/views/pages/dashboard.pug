@@ -1,0 +1,70 @@
+extends ../layouts/main
+block content
+      // Content Wrapper. Contains page content
+      .content-wrapper
+        // Content Header (Page header)
+        .content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1.m-0.text-dark Dashboard v2
+              // /.col
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active Dashboard v2
+                  // /.col
+                  // /.row
+                  // /.container-fluid
+                  // /.content-header
+                  // /.content-wrapper
+                  // Control Sidebar
+        section.content
+          .container-fluid
+            // Info boxes
+            .row
+              .col-12.col-sm-6.col-md-3
+                .info-box
+                  span.info-box-icon.bg-info.elevation-1
+                    i.fas.fa-cog
+                  .info-box-content
+                    span.info-box-text CPU Traffic
+                    span.info-box-number
+                      | 10
+                      small %
+                  // /.info-box-content
+                  // /.info-box
+                  // /.col
+              .col-12.col-sm-6.col-md-3
+                .info-box.mb-3
+                  span.info-box-icon.bg-danger.elevation-1
+                    i.fas.fa-thumbs-up
+                  .info-box-content
+                    span.info-box-text Likes
+                    span.info-box-number 41,410
+                 
+              .clearfix.hidden-md-up
+              .col-12.col-sm-6.col-md-3
+                .info-box.mb-3
+                  span.info-box-icon.bg-success.elevation-1
+                    i.fas.fa-shopping-cart
+                  .info-box-content
+                    span.info-box-text Sales
+                    span.info-box-number 760
+                  // /.info-box-content
+                  // /.info-box
+                  // /.col
+              .col-12.col-sm-6.col-md-3
+                  .info-box.mb-3
+                    span.info-box-icon.bg-warning.elevation-1
+                      i.fas.fa-users
+                    .info-box-content
+                      span.info-box-text New Members
+                      span.info-box-number 2,000
+                    // /.info-box-content
+                    // /.info-box
+                    // /.col
+                    // /.row    
+
+    

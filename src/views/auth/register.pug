@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | Registration Page
+    // Tell the browser to be responsive to screen width
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Font Awesome
+    link(rel='stylesheet', href='/plugins/fontawesome-free/css/all.min.css')
+    // Ionicons
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // icheck bootstrap
+    link(rel='stylesheet', href='/plugins/icheck-bootstrap/icheck-bootstrap.min.css')
+    // Theme style
+    link(rel='stylesheet', href='/dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.register-page
+    .register-box
+      .register-logo
+        a(href='../../index2.html')
+          b Admin
+          | LTE
+      .card
+        .card-body.register-card-body
+          p.login-box-msg Register a new membership
+          form(action='/auth/register', method='post')
+            .input-group.mb-3
+              input.form-control(type='text', name="name", placeholder='Full name')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-user
+            .input-group.mb-3
+              input.form-control(type='email',name="email", placeholder='Email')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-envelope
+            .input-group.mb-3
+              input.form-control(type='password',name="password", placeholder='Password')
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-lock
+            .row
+              .col-8
+                .icheck-primary
+                  input#agreeTerms(type='checkbox', name='terms', value='agree')
+                  label(for='agreeTerms')
+                    | I agree to the 
+                    a(href='#') terms
+              // /.col
+              .col-4
+                button.btn.btn-primary.btn-block(type='submit') Register
+              // /.col
+          .social-auth-links.text-center
+            p - OR -
+            a.btn.btn-block.btn-primary(href='#')
+              i.fab.fa-facebook.mr-2
+              |           Sign up using Facebook
+            a.btn.btn-block.btn-danger(href='#')
+              i.fab.fa-google-plus.mr-2
+              |           Sign up using Google+
+          a.text-center(href='/auth/login') I already have a membership
+    // jQuery
+    script(src='/plugins/jquery/jquery.min.js')
+    // Bootstrap 4
+    script(src='/plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // AdminLTE App
+    script(src='/dist/js/adminlte.min.js')

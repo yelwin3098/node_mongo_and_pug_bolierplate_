@@ -20,6 +20,7 @@ const jwtStrategy = new JwtStrategy(jwtOptions, (jwtPayload, done) => {
     }
 
     if (user) {
+      console.log(user)
       return done(null, user)
     } else {
       return done(null, false)

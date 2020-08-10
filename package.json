@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "dev": "./node_modules/.bin/nodemon src/index.js",
     "lint": "./node_modules/.bin/eslint **/*.js",
     "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --exit"
@@ -29,9 +29,11 @@
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "connect-mongo": "^3.2.0",
     "cors": "^2.8.4",
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
+    "express-session": "^1.17.1",
     "express-validation": "^1.0.2",
     "helmet": "^3.21.1",
     "http-status": "^1.0.1",
@@ -44,6 +46,8 @@
     "nodemailer": "^6.2.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.0",
     "uuid": "^3.3.2"
   }
 }

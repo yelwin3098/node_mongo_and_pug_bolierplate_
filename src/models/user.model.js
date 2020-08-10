@@ -8,7 +8,7 @@ const config = require('../config')
 const Schema = mongoose.Schema
 
 const roles = [
-  'user', 'admin'
+  'customer', 'admin'
 ]
 
 const userSchema = new Schema({
@@ -38,7 +38,7 @@ const userSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'user',
+    default: 'customer',
     enum: roles
   }
 }, {
